@@ -1,3 +1,11 @@
+<!--
+ * @Author: chiwenda 48881696+chiwenda@users.noreply.github.com
+ * @Date: 2023-02-18 22:54:08
+ * @LastEditors: chiwenda 48881696+chiwenda@users.noreply.github.com
+ * @LastEditTime: 2023-02-19 00:23:21
+ * @FilePath: /yudao-ui-admin-vue3/src/views/Login/Login.vue
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
 <template>
   <div
     :class="prefixCls"
@@ -52,6 +60,8 @@
             <QrCodeForm class="p-20px h-auto m-auto <xl:(rounded-3xl light:bg-white)" />
             <!-- 注册 -->
             <RegisterForm class="p-20px h-auto m-auto <xl:(rounded-3xl light:bg-white)" />
+            <!-- 密码重置 -->
+            <ResetPasswordForm class="p-20px h-auto m-auto <xl:(rounded-3xl light:bg-white)" />
           </div>
         </Transition>
       </div>
@@ -65,7 +75,7 @@ import { useDesign } from '@/hooks/web/useDesign'
 import { useAppStore } from '@/store/modules/app'
 import { ThemeSwitch } from '@/layout/components/ThemeSwitch'
 import { LocaleDropdown } from '@/layout/components/LocaleDropdown'
-import { LoginForm, MobileForm, RegisterForm, QrCodeForm } from './components'
+import { LoginForm, MobileForm, RegisterForm, QrCodeForm, ResetPasswordForm } from './components'
 
 const { t } = useI18n()
 const appStore = useAppStore()

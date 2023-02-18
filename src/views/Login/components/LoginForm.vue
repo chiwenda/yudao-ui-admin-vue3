@@ -58,7 +58,12 @@
               </el-checkbox>
             </el-col>
             <el-col :span="12" :offset="6">
-              <el-link type="primary" style="float: right">{{ t('login.forgetPassword') }}</el-link>
+              <el-link
+                type="primary"
+                style="float: right"
+                @click="setLoginState(LoginStateEnum.RESET_PASSWORD)"
+                >{{ t('login.forgetPassword') }}</el-link
+              >
             </el-col>
           </el-row>
         </el-form-item>
@@ -111,7 +116,7 @@
       <el-divider content-position="center">{{ t('login.otherLogin') }}</el-divider>
       <el-col :span="24" style="padding-left: 10px; padding-right: 10px">
         <el-form-item>
-          <div class="flex justify-between w-[100%]">
+          <div class="flex justify-center w-[100%]">
             <Icon
               v-for="(item, key) in socialList"
               :key="key"
@@ -174,12 +179,7 @@ const loginData = reactive({
   }
 })
 
-const socialList = [
-  { icon: 'ant-design:github-filled', type: 0 },
-  { icon: 'ant-design:wechat-filled', type: 30 },
-  { icon: 'ant-design:alipay-circle-filled', type: 0 },
-  { icon: 'ant-design:dingtalk-circle-filled', type: 20 }
-]
+const socialList = [{ icon: 'ant-design:dingtalk-circle-filled', type: 20 }]
 
 // 获取验证码
 const getCode = async () => {
