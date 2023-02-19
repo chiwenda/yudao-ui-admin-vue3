@@ -45,15 +45,19 @@ const tabsList = [
 const pageList = computed(() => {
   if (currentPage.value === 1) {
     return copyIconList[currentActiveType.value]
-      .filter((v) => v.includes(filterValue.value))
-      .slice(currentPage.value - 1, pageSize.value)
+      ? copyIconList[currentActiveType.value]
+          .filter((v) => v.includes(filterValue.value))
+          .slice(currentPage.value - 1, pageSize.value)
+      : Array<string>
   } else {
     return copyIconList[currentActiveType.value]
-      .filter((v) => v.includes(filterValue.value))
-      .slice(
-        pageSize.value * (currentPage.value - 1),
-        pageSize.value * (currentPage.value - 1) + pageSize.value
-      )
+      ? copyIconList[currentActiveType.value]
+          .filter((v) => v.includes(filterValue.value))
+          .slice(
+            pageSize.value * (currentPage.value - 1),
+            pageSize.value * (currentPage.value - 1) + pageSize.value
+          )
+      : Array<string>
   }
 })
 
