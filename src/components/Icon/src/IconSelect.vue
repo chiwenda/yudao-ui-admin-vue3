@@ -2,7 +2,6 @@
 import { CSSProperties } from 'vue'
 import { cloneDeep } from 'lodash-es'
 import { IconJson } from '@/components/Icon/src/data'
-
 type ParameterCSSProperties = (item?: string) => CSSProperties | undefined
 
 const props = defineProps({
@@ -45,15 +44,19 @@ const tabsList = [
 const pageList = computed(() => {
   if (currentPage.value === 1) {
     return copyIconList[currentActiveType.value]
-      .filter((v) => v.includes(filterValue.value))
-      .slice(currentPage.value - 1, pageSize.value)
+      ? copyIconList[currentActiveType.value]
+          .filter((v) => v.includes(filterValue.value))
+          .slice(currentPage.value - 1, pageSize.value)
+      : Array<string>
   } else {
     return copyIconList[currentActiveType.value]
-      .filter((v) => v.includes(filterValue.value))
-      .slice(
-        pageSize.value * (currentPage.value - 1),
-        pageSize.value * (currentPage.value - 1) + pageSize.value
-      )
+      ? copyIconList[currentActiveType.value]
+          .filter((v) => v.includes(filterValue.value))
+          .slice(
+            pageSize.value * (currentPage.value - 1),
+            pageSize.value * (currentPage.value - 1) + pageSize.value
+          )
+      : Array<string>
   }
 })
 
@@ -159,7 +162,7 @@ watch(
 
           <ElPagination
             small
-            :total="copyIconList[currentActiveType].length as unknown as number"
+            :total="copyIconList[currentActiveType]?copyIconList[currentActiveType].length as unknown as number:0"
             :page-size="pageSize"
             :current-page="currentPage"
             background
