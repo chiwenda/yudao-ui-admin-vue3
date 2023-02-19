@@ -56,7 +56,7 @@
 
   <el-row class="mt-5px" :gutter="20" justify="space-between">
     <el-col :xl="16" :lg="16" :md="24" :sm="24" :xs="24" class="mb-10px">
-      <el-card shadow="never">
+      <el-card shadow="never" class="animated animate__fadeInLeft">
         <template #header>
           <div class="flex justify-between h-3">
             <span>{{ t('workplace.factory') }}</span>
@@ -90,7 +90,7 @@
         </el-skeleton>
       </el-card>
 
-      <el-card shadow="never" class="mt-5px">
+      <el-card shadow="never" class="mt-5px animated animate__fadeInUp">
         <el-skeleton :loading="loading" animated>
           <el-row :gutter="20" justify="space-between">
             <el-col :xl="14" :lg="14" :md="24" :sm="24" :xs="24">
@@ -112,7 +112,7 @@
       </el-card>
     </el-col>
     <el-col :xl="8" :lg="8" :md="24" :sm="24" :xs="24" class="mb-10px">
-      <el-card shadow="never">
+      <el-card shadow="never" class="animated animate__fadeInRight">
         <template #header>
           <div class="flex justify-between h-3">
             <span>{{ t('workplace.shortcutOperation') }}</span>
@@ -131,7 +131,7 @@
           </el-row>
         </el-skeleton>
       </el-card>
-      <el-card shadow="never" class="mt-10px">
+      <el-card shadow="never" class="mt-10px animated animate__fadeInRight">
         <template #header>
           <div class="flex justify-between h-3">
             <span>{{ t('workplace.notice') }}</span>

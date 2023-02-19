@@ -104,7 +104,7 @@ export default {
   },
   login: {
     welcome: '欢迎使用FIS运营管理系统',
-    message: '开箱即用的中后台管理系统',
+    message: '智能化运营管理',
     tenantname: '租户名称',
     username: '用户名',
     password: '密码',
