@@ -1,3 +1,11 @@
+<!--
+ * @Author: chiwenda 48881696+chiwenda@users.noreply.github.com
+ * @Date: 2023-02-18 22:54:08
+ * @LastEditors: chiwenda 48881696+chiwenda@users.noreply.github.com
+ * @LastEditTime: 2023-02-19 11:47:05
+ * @FilePath: /yudao-ui-admin-vue3/src/layout/components/UserInfo/src/UserInfo.vue
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
 <script setup lang="ts">
 import { ElMessageBox } from 'element-plus'
 
@@ -43,9 +51,6 @@ const loginOut = () => {
 const toProfile = async () => {
   push('/user/profile')
 }
-const toDocument = () => {
-  window.open('https://doc.iocoder.cn/')
-}
 </script>
 
 <template>
@@ -61,10 +66,6 @@ const toDocument = () => {
         <ElDropdownItem>
           <Icon icon="ep:tools" />
           <div @click="toProfile">{{ t('common.profile') }}</div>
-        </ElDropdownItem>
-        <ElDropdownItem>
-          <Icon icon="ep:menu" />
-          <div @click="toDocument">{{ t('common.document') }}</div>
         </ElDropdownItem>
         <ElDropdownItem divided>
           <Icon icon="ep:switch-button" />

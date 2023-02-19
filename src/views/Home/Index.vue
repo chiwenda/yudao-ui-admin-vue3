@@ -19,7 +19,7 @@
           <el-col :xl="12" :lg="12" :md="12" :sm="24" :xs="24">
             <div class="flex h-70px items-center justify-end <sm:mt-10px">
               <div class="px-8px text-right">
-                <div class="text-14px text-gray-400 mb-20px">{{ t('workplace.project') }}</div>
+                <div class="text-14px text-gray-400 mb-20px">{{ t('workplace.factory') }}</div>
                 <CountTo
                   class="text-20px"
                   :start-val="0"
@@ -59,7 +59,7 @@
       <el-card shadow="never">
         <template #header>
           <div class="flex justify-between h-3">
-            <span>{{ t('workplace.project') }}</span>
+            <span>{{ t('workplace.factory') }}</span>
             <el-link type="primary" :underline="false">{{ t('action.more') }}</el-link>
           </div>
         </template>
@@ -93,14 +93,14 @@
       <el-card shadow="never" class="mt-5px">
         <el-skeleton :loading="loading" animated>
           <el-row :gutter="20" justify="space-between">
-            <el-col :xl="10" :lg="10" :md="24" :sm="24" :xs="24">
+            <el-col :xl="14" :lg="14" :md="24" :sm="24" :xs="24">
               <el-card shadow="hover" class="mb-10px">
                 <el-skeleton :loading="loading" animated>
                   <Echart :options="pieOptionsData" :height="280" />
                 </el-skeleton>
               </el-card>
             </el-col>
-            <el-col :xl="14" :lg="14" :md="24" :sm="24" :xs="24">
+            <el-col :xl="10" :lg="10" :md="24" :sm="24" :xs="24">
               <el-card shadow="hover" class="mb-10px">
                 <el-skeleton :loading="loading" animated>
                   <Echart :options="barOptionsData" :height="280" />
@@ -174,6 +174,7 @@ import { pieOptions, barOptions } from './echarts-data'
 const { t } = useI18n()
 const userStore = useUserStore()
 const { setWatermark } = useWatermark()
+setWatermark('60217790-池文达')
 const loading = ref(true)
 const avatar = userStore.getUser.avatar ? userStore.getUser.avatar : avatarImg
 const username = userStore.getUser.nickname
@@ -199,42 +200,42 @@ let projects = reactive<Project[]>([])
 const getProject = async () => {
   const data = [
     {
-      name: 'Github',
+      name: '湖东工厂',
       icon: 'akar-icons:github-fill',
       message: 'workplace.introduction',
       personal: 'Archer',
       time: new Date()
     },
     {
-      name: 'Vue',
+      name: '湖西工厂',
       icon: 'logos:vue',
       message: 'workplace.introduction',
       personal: 'Archer',
       time: new Date()
     },
     {
-      name: 'Angular',
+      name: '宜宾工厂',
       icon: 'logos:angular-icon',
       message: 'workplace.introduction',
       personal: 'Archer',
       time: new Date()
     },
     {
-      name: 'React',
+      name: '溧阳工厂',
       icon: 'logos:react',
       message: 'workplace.introduction',
       personal: 'Archer',
       time: new Date()
     },
     {
-      name: 'Webpack',
+      name: '瑞庆工厂',
       icon: 'logos:webpack',
       message: 'workplace.introduction',
       personal: 'Archer',
       time: new Date()
     },
     {
-      name: 'Vite',
+      name: '福鼎工厂',
       icon: 'vscode-icons:file-type-vite',
       message: 'workplace.introduction',
       personal: 'Archer',
@@ -282,32 +283,32 @@ let shortcut = reactive<Shortcut[]>([])
 const getShortcut = async () => {
   const data = [
     {
-      name: 'Github',
+      name: 'Fis系统',
       icon: 'akar-icons:github-fill',
       url: 'github.io'
     },
     {
-      name: 'Vue',
+      name: 'Tom系统',
       icon: 'logos:vue',
       url: 'vuejs.org'
     },
     {
-      name: 'Vite',
+      name: 'Mes系统',
       icon: 'vscode-icons:file-type-vite',
       url: 'https://vitejs.dev/'
     },
     {
-      name: 'Angular',
+      name: 'Fis系统',
       icon: 'logos:angular-icon',
       url: 'github.io'
     },
     {
-      name: 'React',
+      name: '九宫格系统',
       icon: 'logos:react',
       url: 'github.io'
     },
     {
-      name: 'Webpack',
+      name: '无纸化系统',
       icon: 'logos:webpack',
       url: 'github.io'
     }

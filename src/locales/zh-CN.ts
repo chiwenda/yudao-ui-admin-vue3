@@ -167,9 +167,9 @@ export default {
     estimate: '预计',
     actual: '实际',
     directAccess: '直接访问',
-    mailMarketing: '邮件营销',
-    allianceAdvertising: '联盟广告',
-    videoAdvertising: '视频广告',
+    mailMarketing: '邮件访问',
+    allianceAdvertising: '基地访问',
+    videoAdvertising: '其他访问',
     searchEngines: '搜索引擎',
     weeklyUserActivity: '每周用户活跃量',
     activeQuantity: '活跃量',
@@ -181,12 +181,13 @@ export default {
     saturday: '周六',
     sunday: '周日'
   },
+  //首页
   workplace: {
     welcome: '你好',
     happyDay: '祝你开心每一天!',
     toady: '今日晴',
     notice: '通知公告',
-    project: '项目数',
+    factory: '工厂',
     access: '项目访问',
     toDo: '待办',
     introduction: '一个正经的简介',
